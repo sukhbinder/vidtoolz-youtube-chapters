@@ -1,0 +1,33 @@
+[project]
+name = "vidtoolz-youtube-chapters"
+version = "0.1.0"
+description = "Write formated youtube chapters with text inputs"
+readme = "README.md"
+authors = [{name = "Sukhbinder Singh"}]
+license = {text = "Apache-2.0"}
+classifiers = [
+    "License :: OSI Approved :: Apache Software License"
+]
+dependencies = [
+    "vidtoolz",
+]
+
+[project.urls]
+Homepage = "https://github.com/sukhbinder/vidtoolz-youtube-chapters"
+Changelog = "https://github.com/sukhbinder/vidtoolz-youtube-chapters/releases"
+Issues = "https://github.com/sukhbinder/vidtoolz-youtube-chapters/issues"
+CI = "https://github.com/sukhbinder/vidtoolz-youtube-chapters/actions"
+
+[project.entry-points."vidtoolz_plugins"]
+chapters = "vidtoolz_youtube_chapters:chapters_plugin"
+
+
+[project.optional-dependencies]
+test = ["pytest"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
